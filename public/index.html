@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
-  <!--We load this script here to allow the readFolder method to appear to the DOM...We also load the same script at the bottom, to let the script include the DOM it its execution, once the DOM loads. I haven't found a better solution for this problem, but now, eliminating one of the loading statements is causing problems for the app Bear with me.-->
+  <!--We load this script here to allow the readFolder method to appear to the DOM...We also load the same script at the bottom, to let the script include the DOM in its execution, once the DOM loads. I haven't found a better solution for this problem, but now, eliminating one of the loading statements is causing problems for the app. Bear with me.-->
   <script src="./renderer/renderer.js"></script>
 </head>
 
@@ -20,7 +20,11 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
+  
+  
   <div id="root"></div>
+
+
   <div class="shortcut" onclick="readFolder('/');">
     <i class="fa fa-anchor" aria-hidden="true"></i> Root</div>
   <div class="shortcut" onclick="readFolder('/Users/Salman/Desktop/')">
